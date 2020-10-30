@@ -39,7 +39,7 @@ services:
       - BANK_API_URL=http://localhost:8080
       # - SENDGRID_API_KEY=
       # - ADMIN_API_TOKEN=${ADMIN_API_TOKEN}
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - '3000:3000'
     volumes:
